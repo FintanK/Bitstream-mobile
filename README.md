@@ -47,6 +47,12 @@ Under ./Angular4_CLI_Starter
 
 ## Building for Android and IOS
 
+**Note:** A custom Cordova hook has been created for this app that pipes the static assets fr the Angular build into the Cordova build.
+It essentially bundles the Angular app into a cross-platform app.
+
+This was built on a Mac so if you spot any issues on Windows..well best of luck :)
+
+
 In the root directory
 
 ```
