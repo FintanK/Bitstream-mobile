@@ -1,6 +1,6 @@
 # BitStream
 
-Anti-censorship application built using Cordova and Angular.js.
+Open Source Anti-censorship application built using Cordova and Angular.js.
 
 ![alt text](./BitStream1.png)
 
@@ -13,14 +13,6 @@ Freedom of information! Feel free to fork, copy, edit etc.
 
 - https://ipfs.io/ - IPFS
 - https://webtorrent.io/ - WebTorrent
-
-## Donate
-
-```
-Bitcoin: 1GkFczi2q494npKgH33w9UVkM6UGe4pUea
-Ethereum: 0xACBC96E4c7556dA6e78B85D6d6f0934A9Ff0d9F7
-Litecoin: LdkbEPzQCnVABZzYEmVHJyM2dYJddqZcVZ
-```
 
 ## Installation
 
@@ -67,4 +59,17 @@ You can then run emulators for Android and IOS dependencing on your OS.
 ```
 cordova emulate ios
 cordova emulate android
+```
+
+# License
+
+MIT
+
+
+## Donate
+
+```
+Bitcoin: 1GkFczi2q494npKgH33w9UVkM6UGe4pUea
+Ethereum: 0xACBC96E4c7556dA6e78B85D6d6f0934A9Ff0d9F7
+Litecoin: LdkbEPzQCnVABZzYEmVHJyM2dYJddqZcVZ
 ```
