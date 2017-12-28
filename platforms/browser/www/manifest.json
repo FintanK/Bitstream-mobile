@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "BitStream",
+  "short_name": "BitStream",
+  "version": "io.convergence.bitstream",
+  "description": "Anonymous Decentralised Internet Services",
+  "author": "Convergence Technologies",
+  "icons": [],
+  "start_url": "index.html"
+}

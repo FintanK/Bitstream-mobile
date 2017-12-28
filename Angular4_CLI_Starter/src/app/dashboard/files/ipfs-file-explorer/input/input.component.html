@@ -1,0 +1,73 @@
+<header class="app-header navbar">
+  <button class="navbar-toggler d-lg-none" type="button" appMobileSidebarToggler>&#9776;</button>
+  <ul class="nav navbar-nav mr-auto d-md-down-none">
+    <li class="nav-item">
+      <a class="nav-link navbar-toggler" href="#" appSidebarToggler>&#9776;</a>
+    </li>
+  </ul>
+</header>
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item active"><a href="#">IPFS</a></li>
+</ol>
+
+<div class="app-body">
+  <div class="sidebar">
+    <app-sidebar active="files"></app-sidebar>
+  </div>
+
+  <main style="width: 100%">
+    <div class="card" *ngIf="form">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <label for="file-input" (click)="upload($event)">
+              <i class="fa fa-cloud fa-sm"></i>Click here to upload a file to IPFS.<br/><br/>
+            </label>
+            <input style="display: none" #file id="file-input" type="file" (change)="upload($event)"/>
+            <hr/>
+          </div>
+          <div class="col-sm-12">
+            <!-- Displays progress of file upload-->
+            <div class="progressBarTitle" *ngIf="!progress && showUpdate" style="text-align: center;">
+              <div>Your browser is preparing the file for upload. Larger files take a long time, be patient :)</div>
+              <hr />
+            </div>
+            <div class="progressBar" *ngIf="this.progress / this.parentSize *100">
+              Upload progress: {{(this.progress / this.parentSize *100).toFixed(1)}} %
+              <hr />
+            </div>
+            <div *ngIf="!uploadedFiles || !uploadedFiles.length">
+              You have not uploaded any files. Click the cloud to get started.
+              <hr/>
+            </div>
+          </div>
+        </div>
+        <div class="row" *ngFor="let file of uploadedFiles">
+          <div class="col-sm-12 file-info"><strong>{{file.name}}</strong></div>
+          <br/>
+          <div class="col-sm-12 file-info">{{file.type}}</div>
+          <div class="col-sm-12 file-info" style="float:left">
+            <i class="fa fa-trash-o" (click)="deleteFile(file)"></i> Remove link from device
+          </div>
+          <div class="col-sm-12 file-info">
+            <a href="https://ipfs.io/ipfs/{{file.url}}" target="_blank" style="color: black"><i class="fa fa-link" aria-hidden="true"></i> IPFS Link</a>
+          </div>
+          <div class="col-sm-12">
+            <hr/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="col-sm-12">
+              <p>
+                IPFS is a versioned, peer-to-peer filesystem protocol that works by distributing content over a global network. It can be used to share files publicly, anonymously and without censorship.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

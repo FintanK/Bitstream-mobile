@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.convergence.bitstream" version="1.0.0" xmlns="http://www.w3.org/ns/widgets">
+    <name>BitStream</name>
+    <description>
+      Anonymous Decentralised Internet Services
+    </description>
+    <author email="fintanak@gmail.com" href="fintanak@gmail.com">
+      Convergence Technologies
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <hook src="scripts/prepareAngular2App.js" type="before_build" />
+</widget>

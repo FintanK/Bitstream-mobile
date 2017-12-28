@@ -1,0 +1,48 @@
+<header class="app-header navbar">
+  <button class="navbar-toggler d-lg-none" type="button" appMobileSidebarToggler>&#9776;</button>
+  <ul class="nav navbar-nav mr-auto d-md-down-none">
+    <li class="nav-item">
+      <a class="nav-link navbar-toggler" href="#" appSidebarToggler>&#9776;</a>
+    </li>
+  </ul>
+</header>
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item active"><a href="#">Chat</a></li>
+</ol>
+
+<div class="app-body">
+  <div class="sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
+
+  <main class="card" style="width: 100%; padding-top: 40px;">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-sm-12">
+          <h2>Create a room</h2>
+          <input [(ngModel)]="peerId" #ctrl="ngModel" type="text" class="form-control" placeholder="Your custom room name">
+        </div>
+        <div class="col-sm-12" *ngIf="peerId">
+          <p>Your room ID for this session: {{peerId}} - share this with anyone who wants to join</p>
+        </div>
+        <div class="col-sm-12">
+          <button (click)="createRoom()">Create a room</button>
+        </div>
+        <div class="col-sm-12">
+          <p>or...
+          </p>
+          <h2>Connect to existing room</h2>
+          <input [(ngModel)]="remotePeerId" #ctrl="ngModel" type="text" class="form-control" placeholder="Existing room name">
+          <button (click)="connectToRoom()">Connect to room</button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+</div>

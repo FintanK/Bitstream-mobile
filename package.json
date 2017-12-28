@@ -1,0 +1,32 @@
+{
+  "name": "BitStream",
+  "displayName": "BitStream",
+  "version": "1.0.0",
+  "description": "Anti-censorship mobile application that uses IPFS and WebTorrent",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fintan Kearney",
+  "license": "MIT",
+  "dependencies": {
+    "cordova-android": "6.3.0",
+    "cordova-browser": "^5.0.1",
+    "cordova-ios": "^4.5.4",
+    "cordova-plugin-device": "^1.1.7",
+    "cordova-plugin-statusbar": "^2.3.0",
+    "cordova-windows": "^5.0.0"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-device": {},
+      "cordova-plugin-statusbar": {}
+    },
+    "platforms": [
+      "browser",
+      "windows",
+      "ios",
+      "android"
+    ]
+  }
+}

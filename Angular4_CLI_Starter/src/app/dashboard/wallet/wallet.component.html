@@ -1,0 +1,74 @@
+<header class="app-header navbar">
+  <button class="navbar-toggler d-lg-none" type="button" appMobileSidebarToggler>&#9776;</button>
+  <ul class="nav navbar-nav mr-auto d-md-down-none">
+    <li class="nav-item">
+      <a class="nav-link navbar-toggler" href="#" appSidebarToggler>&#9776;</a>
+    </li>
+  </ul>
+</header>
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item active"><a href="#">Wallet</a></li>
+</ol>
+
+<div class="app-body">
+  <div class="sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
+  <main class="">
+    <div class="animated fadeIn" style="background-image: url('assets/img/background.jpeg'); background-repeat: no-repeat; min-height: 1000px; max-width: 100%; background-size: cover;">
+      <div class="card wallet-setup">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <button class="btn btn-primary" (click)="setUpBitcoinWallet()" *ngIf="!BTC_PRIVATE_KEY">
+                Set up your Bitcoin Wallet
+              </button>
+              <br /><br />
+              <div class="btc-wallet" *ngIf="BTC_PRIVATE_KEY">
+                <h3>Your Bitcoin Wallet</h3>
+                <p>
+                  Your balance : 0.87 BTC <br />
+                </p>
+                <p>
+                  Wallet Address : {{BTC_PUBLIC_KEY}} <br />
+                </p>
+
+                <input type="text" placeholder="Destination Address">
+                <button (click)="createBitcoinTransaction()">Send funds to address</button>
+
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-primary" (click)="setupLitecoinWallet()" *ngIf="!LTC_PRIVATE_KEY">
+                Set up your Litecoin Wallet
+              </button>
+              <br /><br />
+              <div class="ltc-wallet" *ngIf="LTC_PRIVATE_KEY">
+                <h3>Your Litecoin Wallet</h3>
+                <p>
+                  Wallet Address : {{LTC_PRIVATE_KEY}} <br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card wallet-setup">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <p>Enjoying the app? Buy me a coffee!</p>
+              <p>
+                Bitcoin - 15zyHCqLufCuM271vj2hVYj8BaUXpPM5Yh <br />
+                Ethereum - 0x13599A07c0500604ED0FC3F82F7AA2Fc1eBD4222 <br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

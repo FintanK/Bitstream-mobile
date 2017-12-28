@@ -1,0 +1,76 @@
+{
+  "_from": "cordova-ubuntu@^4.3.4",
+  "_id": "cordova-ubuntu@4.3.4",
+  "_inBundle": false,
+  "_integrity": "sha1-zzAdlfehgEOIRlwVT36csdVuRhg=",
+  "_location": "/cordova-ubuntu",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "cordova-ubuntu@^4.3.4",
+    "name": "cordova-ubuntu",
+    "escapedName": "cordova-ubuntu",
+    "rawSpec": "^4.3.4",
+    "saveSpec": null,
+    "fetchSpec": "^4.3.4"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-ubuntu/-/cordova-ubuntu-4.3.4.tgz",
+  "_shasum": "cf301d95f7a1804388465c154f7e9cb1d56e4618",
+  "_spec": "cordova-ubuntu@^4.3.4",
+  "_where": "/Users/fintankearney/Desktop/Create/ipfs-cordova-native",
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "bundleDependencies": [
+    "colors",
+    "optimist",
+    "q",
+    "shelljs",
+    "elementtree"
+  ],
+  "contributors": [
+    {
+      "name": "Maxim Ermilov",
+      "email": "maxim.ermilov@canonical.com"
+    },
+    {
+      "name": "Jean-Francois Moy",
+      "email": "jean-francois.moy@canonical.com"
+    },
+    {
+      "name": "David Barth",
+      "email": "david.barth@canonical.com"
+    }
+  ],
+  "dependencies": {
+    "colors": "0.6.2",
+    "elementtree": "*",
+    "optimist": "0.6.0",
+    "q": "2.0.*",
+    "shelljs": "0.2.6"
+  },
+  "deprecated": false,
+  "description": "Cordova tooling for the Ubuntu platform.",
+  "engineStrict": "true",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "keywords": [
+    "ubuntu",
+    "cordova",
+    "apache"
+  ],
+  "license": "Apache Version 2.0",
+  "main": "bin/create",
+  "name": "cordova-ubuntu",
+  "repository": {
+    "type": "git",
+    "url": "https://git-wip-us.apache.org/repos/asf/cordova-ubuntu.git"
+  },
+  "version": "4.3.4"
+}

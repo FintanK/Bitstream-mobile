@@ -1,0 +1,11 @@
+main {
+  width: 100%;
+}
+
+.icon-briefcase {
+  margin-right: 12px;
+}
+
+.sidebar {
+  position: relative !important;
+}

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.convergence.bitstream" version="1.0.0" xmlns="http://www.w3.org/ns/widgets">
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>BitStream</name>
+    <description>
+      Anonymous Decentralised Internet Services
+    </description>
+    <author email="fintanak@gmail.com" href="fintanak@gmail.com">
+      Convergence Technologies
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <hook src="scripts/prepareAngular2App.js" type="before_build" />
+    <allow-intent href="market:*" />
+    <icon density="ldpi" src="res/icons/android/ldpi.png" />
+    <icon density="mdpi" src="res/icons/android/mdpi.png" />
+    <icon density="hdpi" src="res/icons/android/hdpi.png" />
+    <icon density="xhdpi" src="res/icons/android/xhdpi.png" />
+    <icon density="xxhdpi" src="res/icons/android/xxhdpi.png" />
+    <icon density="xxxhdpi" src="res/icons/android/xxxhdpi.png" />
+    <splash density="port-ldpi" src="res/screens/android/splash-port-ldpi.png" />
+    <splash density="port-mdpi" src="res/screens/android/splash-port-mdpi.png" />
+    <splash density="port-hdpi" src="res/screens/android/splash-port-hdpi.png" />
+    <splash density="port-xhdpi" src="res/screens/android/splash-port-xhdpi.png" />
+    <splash density="port-xxhdpi" src="res/screens/android/splash-port-xxhdpi.png" />
+    <splash density="port-xxxhdpi" src="res/screens/android/splash-port-xxxhdpi.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="SplashScreenBackgroundColor" value="black" />
+</widget>

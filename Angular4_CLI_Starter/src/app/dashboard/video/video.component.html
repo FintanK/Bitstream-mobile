@@ -1,0 +1,63 @@
+<header class="app-header navbar">
+  <button class="navbar-toggler d-lg-none" type="button" appMobileSidebarToggler>&#9776;</button>
+  <ul class="nav navbar-nav mr-auto d-md-down-none">
+    <li class="nav-item">
+      <a class="nav-link navbar-toggler" href="#" appSidebarToggler>&#9776;</a>
+    </li>
+  </ul>
+</header>
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item active"><a href="#">Movies</a></li>
+</ol>
+
+<div class="app-body">
+  <div class="sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
+  <main class="card" style="width: 100%">
+
+    <div class="container">
+      <div class="row" *ngIf="!uploadedFiles">
+        <div class="col-sm-12">
+          <h2>You have not uploaded any videos.</h2>
+        </div>
+      </div>
+
+      <div *ngFor="let file of uploadedFiles">
+        <div class="row" *ngIf="isVideo(file)">
+          <div class="col-sm-12">
+            <video controls="" poster="data:image/gif,AAAA">
+              <source src="https://ipfs.io/ipfs/{{file.url}}">
+            </video>
+          </div>
+          <div class="col-sm-12" style="padding-top: 20px;">
+            <div class="col-sm-6"><strong>File Name:</strong></div>
+            <div class="col-sm-6">{{file.name}}</div>
+            <br />
+            <div class="col-sm-6"><strong>File Type:</strong></div>
+            <div class="col-sm-6">{{file.type}}</div>
+            <br />
+            <br />
+            <br />
+            <div class="col-sm-6">
+              <a href="https://ipfs.io/ipfs/{{file.url}}" target="_blank">
+                IPFS Link
+              </a>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.convergence.bitstream" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>BitStream</name>
+    <description>
+      Anonymous Decentralised Internet Services
+    </description>
+    <author email="fintanak@gmail.com" href="fintanak@gmail.com">
+      Convergence Technologies
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <hook src="scripts/prepareAngular2App.js" type="before_build" />
+    <preference name="CodePushDeploymentKey" value="IqEvZdQ7Ip-5KJLLUxWqRzGTPN0w53079709-cd9a-42ba-be87-17d40b94eb7f" />
+    <preference name="SplashScreen" value="res/windows/splashscreen.png" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="SplashScreenBackgroundColor" value="black" />
+    <preference name="ShowSplashScreen" value="true" />
+    <preference name="SplashScreenWidth" value="620" />
+    <preference name="SplashScreenHeight" value="300" />
+</widget>

@@ -1,0 +1,74 @@
+<header class="app-header navbar">
+  <button class="navbar-toggler d-lg-none" type="button" appMobileSidebarToggler>&#9776;</button>
+  <ul class="nav navbar-nav mr-auto d-md-down-none">
+    <li class="nav-item">
+      <a class="nav-link navbar-toggler" href="#" appSidebarToggler>&#9776;</a>
+    </li>
+  </ul>
+</header>
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item active"><a href="#">WebTorrent</a></li>
+</ol>
+
+<div class="app-body">
+  <div class="sidebar">
+    <app-sidebar active="storage"></app-sidebar>
+  </div>
+  <main class="card" style="width: 100%; padding-top: 40px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2>WebTorrent</h2>
+          <p>WebTorrent does not support all torrent protocols.
+            If you seed a file from this app it will be available for anyone else using WebTorrent as long as you are
+            connected to the network or someone else has a copy downloaded. </p>
+          <p>You can alternatively upload your files to IPFS and
+            share the torrent file. This allows people to seed and share the content even while you are offline. Any
+            torrent files created with content on IPFS cannot be censored.</p>
+        </div>
+        <div class="col-sm-12" *ngIf="tor_client.torrents && tor_client.torrents.length">
+          <ul *ngFor="let torrent of tor_client.torrents">
+            <li><strong>Title: </strong>{{torrent.dn}}</li>
+            <li><strong>Download Speed: </strong>{{formatSizeUnits(torrent.downloadSpeed)}}</li>
+            <li><strong>Upload Speed: </strong>{{formatSizeUnits(torrent.uploadSpeed)}}</li>
+            <li><strong>No of Peers: </strong>{{torrent.numPeers ? torrent.numPeers : 0}}</li>
+            <li><strong>Progress: </strong>{{(torrent.progress *100).toFixed(1)}} %</li>
+          </ul>
+          <h3 *ngIf="tor_client.torrents.length && tor_client.torrents[0].files">Files</h3>
+          <ul *ngIf="tor_client.torrents.length && tor_client.torrents[0].files">
+            <li *ngFor="let file of tor_client.torrents[0].files">{{file.name}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="content">
+            <form class="navbar-form">
+              <input class="form-control" id="torrentId" name="torrentId" placeholder="magnet:"
+                     value="magnet:?xt=urn:btih:08ada5a7a6183aae1e09d831df6748d566095a10&dn=Sintel&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&ws=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2F&xs=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2Fsintel.torrent">
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <button class="btn btn-info btn-search-torrents" (click)="addTorrent()">Download Using Magnet</button>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="results col-sm-12">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
