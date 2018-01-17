@@ -8,7 +8,15 @@
     {
       "root": "src",
       "outDir": "dist",
-      "assets": ["assets"],
+      "assets": [
+        "assets",
+        "favicon.ico",
+        "inline.bundle.js",
+        "polyfills.bundle.js",
+        "main.bundle.js",
+        "vendor.bundle.js",
+        "styles.bundle.js"
+      ],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
